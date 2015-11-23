@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="horizontal"
+        android:paddingBottom="@dimen/space_between_content_areas"
         tools:ignore="UseCompoundDrawables">
 
         <ImageView
