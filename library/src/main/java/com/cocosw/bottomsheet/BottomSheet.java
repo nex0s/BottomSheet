@@ -222,6 +222,8 @@ public class BottomSheet extends Dialog implements DialogInterface {
 
         mDialogView.setCollapsible(false);
 
+        mDialogView.setEnabled(builder.draggable);
+
         actions = builder.menu;
         menuItem = actions;
         // over the initial numbers
@@ -458,7 +460,6 @@ public class BottomSheet extends Dialog implements DialogInterface {
     }
 
 
-
     public Menu getMenu() {
         return builder.menu;
     }
@@ -489,6 +490,7 @@ public class BottomSheet extends Dialog implements DialogInterface {
         private boolean grid;
         private OnClickListener listener;
         private OnDismissListener dismissListener;
+        private boolean draggable;
         private Drawable icon;
         private int limit = -1;
         private MenuItem.OnMenuItemClickListener menulistener;
@@ -731,6 +733,11 @@ public class BottomSheet extends Dialog implements DialogInterface {
          */
         public Builder setOnDismissListener(@NonNull OnDismissListener listener) {
             this.dismissListener = listener;
+            return this;
+        }
+
+        public Builder setDraggable(boolean draggable) {
+            this.draggable = draggable;
             return this;
         }
     }
